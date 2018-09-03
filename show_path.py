@@ -58,4 +58,4 @@ if __name__ == '__main__':
 
     p_id = list(nx.all_shortest_paths(G, source, target))
     p_name = replace_by_name(digi_id, p_id)
-    pprint(p_name)
+    pprint(p_name, width=150)
