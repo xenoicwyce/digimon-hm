@@ -56,6 +56,6 @@ if __name__ == '__main__':
         if not target:
             raise NameError('Digimon name "%s" not found.' % sys.argv[2])
 
-    p_id = list(nx.all_shortest_paths(G, source, target))
-    p_name = replace_by_name(digi_id, p_id)
-    pprint(p_name, width=150)
+    paths = replace_by_name(digi_id, nx.all_shortest_paths(G, source, target))
+    for idx, path in enumerate(paths, start=1):
+        print('%s. %s' % (idx, path))
