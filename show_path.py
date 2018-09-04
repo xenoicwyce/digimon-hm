@@ -2,8 +2,6 @@ import json
 import sys
 import networkx as nx
 
-from pprint import pprint
-
 def get_digi_graph():
     with open('digivolution_chart.json') as f:
         digi_chart_json = json.load(f)
